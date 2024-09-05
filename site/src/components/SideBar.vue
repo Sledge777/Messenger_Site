@@ -22,7 +22,7 @@ export default {
 .wrapper {
     width: 40%;
     height: 100vh;
-    background-color: aqua;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

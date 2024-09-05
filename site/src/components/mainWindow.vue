@@ -1,6 +1,6 @@
 <template>
-    <div class='wrapper'>
-        rigth
+    <div class='wrapp'>
+        
     </div>
 </template>
 <script>
@@ -9,9 +9,9 @@ export default {
 }
 </script>
 <style scoped>
-.wrapper {
+.wrapp {
     width: 60%;
     height: 100vh;
-    background-color: red;
+    background-color:aquamarine ;
 } 
 </style>
