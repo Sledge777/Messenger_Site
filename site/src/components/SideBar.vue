@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
-        <SideBar_Header/>
-        <SideBar_Chats/>
-        <SideBar_Footer/>
+        <SideBar_Header class="comp1"/>
+        <SideBar_Chats class="comp2"/>
+        <SideBar_Footer class="comp3"/>
     </div>
 </template>
 <script>
@@ -15,16 +15,27 @@ export default {
         SideBar_Footer,
         SideBar_Header,
         SideBar_Chats
-    }
+    },
 }
 </script>
 <style scoped>
 .wrapper {
     width: 40%;
     height: 100vh;
-    background-color: white;
+    background-color: #2E2E2E;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+}
+.comp1{
+    position: absolute;
+    top: 0;
+}
+.comp3 {
+    position: absolute;
+    bottom: 0;
+}
+.comp2 {
+    margin-top: 20%;
 }
 </style>

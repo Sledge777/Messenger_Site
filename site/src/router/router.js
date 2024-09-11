@@ -1,5 +1,6 @@
 import AddUser from "@/pages/AddUser.vue";
 import Main from "@/pages/main.vue";
+import Messege from "@/pages/messege.vue";
 import Settings from "@/pages/Settings.vue";
 import SignIn from "@/pages/SignIn.vue";
 import SignUp from "@/pages/SignUp.vue";
@@ -25,6 +26,10 @@ const routes = [
     {
         path: '/SignUp',
         component: SignUp
+    },
+    {   
+        path: '/messege',
+        component: Messege
     }
 ]
 

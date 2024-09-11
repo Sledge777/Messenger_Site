@@ -12,6 +12,6 @@ export default {
 .wrapp {
     width: 60%;
     height: 100vh;
-    background-color:aquamarine ;
+    background-color:#2E2E2E;
 } 
 </style>

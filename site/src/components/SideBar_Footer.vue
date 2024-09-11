@@ -13,13 +13,16 @@ export default {
 <style scoped>
 .wrapp {
     height: 10%;
-    width: 100%;
-    background-color: grey;
+    width: 99%;
+    background-color: #EC9704;
     box-shadow: 0px -1px 2px black;
     border-top: 3px black solid;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 2%;
+    margin-left: 1%;
 }
 .plus {
     height: 80%;

@@ -1,18 +1,18 @@
 <template>
     <div class="wrapper">
         <SideBar/>
-        <div class='line'></div>
-        <mainWindowSettings/>
+        <div class="line"></div>
+        <MainWindowMessege/>
     </div>
 </template>
 <script>
 import SideBar from '@/components/SideBar.vue';
-import mainWindowSettings from '@/components/MainWindowSettings.vue';
+import MainWindowMessege from '@/components/mWM.vue';
 
 export default {
     components: {
         SideBar,
-        mainWindowSettings
+        MainWindowMessege
     }
 }
 </script>

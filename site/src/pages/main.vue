@@ -13,7 +13,7 @@ export default {
     components: {
       SideBar,
       mainWindow
-    }
+    },
 }
 </script>
 <style scoped>
@@ -21,7 +21,7 @@ export default {
     display: flex;
 }
 .line {
-    background-color: black;
-    width: 0.1%;
+    background-color: #583E26;
+    width: 1.5%;
 }
 </style>
