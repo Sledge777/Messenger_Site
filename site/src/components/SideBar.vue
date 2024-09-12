@@ -1,8 +1,8 @@
 <template>
-    <div class="wrapper">
-        <SideBar_Header class="comp1"/>
-        <SideBar_Chats class="comp2"/>
-        <SideBar_Footer class="comp3"/>
+    <div class="wrapp">
+        <SideBar_Header class="comp1" />
+        <SideBar_Chats class="comp2" />
+        <SideBar_Footer class="comp3" />
     </div>
 </template>
 <script>
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <style scoped>
-.wrapper {
+.wrapp {
     width: 40%;
     height: 100vh;
     background-color: #2E2E2E;
@@ -27,14 +27,17 @@ export default {
     flex-direction: column;
     position: relative;
 }
-.comp1{
+
+.comp1 {
     position: absolute;
     top: 0;
 }
+
 .comp3 {
     position: absolute;
     bottom: 0;
 }
+
 .comp2 {
     margin-top: 20%;
 }

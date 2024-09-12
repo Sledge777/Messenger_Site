@@ -1,15 +1,14 @@
 <template>
-    <div class="wrapp">
+    <div class="wrappe">
         <div id="test" @click="$router.push('/messege')"></div>
     </div>
 </template>
 <script>
 export default {
-    mounted() {
+    beforeMount() { // поменял с mounted
         const receivername = localStorage.getItem('receivername')
-        console.log(receivername)
         const ismessege = localStorage.getItem('ismessege')
-        if(ismessege == 'yes') {    
+        if (ismessege == 'yes') {
             const div = document.querySelector('#test')
             div.classList.toggle('box')
             div.textContent = receivername
@@ -19,15 +18,16 @@ export default {
 }
 </script>
 <style scoped>
-.wrapp {
-    padding: 3%;
+.wrappe {
     display: flex;
 }
+
 .box {
     background-color: yellow;
     height: 15vh;
     width: 10vw;
     border-radius: 10px;
     cursor: pointer;
+    padding: 1%;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
-        <SideBar/>
+        <SideBar />
         <div class='line'></div>
-        <mainWindowSettings/>
+        <mainWindowSettings />
     </div>
 </template>
 <script>
@@ -20,6 +20,7 @@ export default {
 .wrapper {
     display: flex;
 }
+
 .line {
     background-color: #583E26;
     width: 1.5%;

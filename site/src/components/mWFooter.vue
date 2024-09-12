@@ -1,8 +1,8 @@
 <template>
     <div class="wrappe">
-       <input v-model="messageContent" type="text" placeholder="Введите текст"> 
-       <img @click="sendMessage" src="@/assets/send.png" alt="send">
-       <img src="@/assets/voice.png" alt="voice">
+        <input v-model="messageContent" type="text" placeholder="Введите текст">
+        <img @click="sendMessage" src="@/assets/send.png" alt="send">
+        <img src="@/assets/voice.png" alt="voice">
     </div>
 </template>
 <script>
@@ -14,9 +14,9 @@ export default {
     },
     methods: {
         sendMessage() {
-            this.$emit('sendMessage', this.messageContent); // Эмитируем событие sendMessage с содержимым сообщения
-            this.messageContent = ''; // Очищаем поле ввода после отправки
-    },
+            this.$emit('sendMessage', this.messageContent);
+            this.messageContent = '';
+        },
     }
 }
 </script>
@@ -35,10 +35,12 @@ export default {
     padding: 0 2.5%;
     gap: 5%;
 }
+
 img {
     height: 90%;
     cursor: pointer;
 }
+
 input {
     width: 78%;
     background-color: #f3d332;

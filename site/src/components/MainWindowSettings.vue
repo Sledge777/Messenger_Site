@@ -18,9 +18,9 @@ export default {
     },
     methods: {
         auth() {
-            if(localStorage.getItem('token')) {
+            if (localStorage.getItem('token')) {
                 return true
-            }else {
+            } else {
                 return false
             }
         }
@@ -31,8 +31,9 @@ export default {
 .wrapp {
     width: 60%;
     height: 100vh;
-    background-color:#2E2E2E;
-} 
+    background-color: #2E2E2E;
+}
+
 .wrapp_btn {
     margin: 0 5%;
     margin-top: 10%;
@@ -40,6 +41,7 @@ export default {
     flex-direction: column;
     gap: 5vh;
 }
+
 .auth_btn {
     height: 5vh;
     font-size: 3vh;
@@ -47,9 +49,11 @@ export default {
     color: white;
     border-radius: 10px;
 }
+
 .auth_btn:hover {
-    background-color:blueviolet;
+    background-color: blueviolet;
 }
+
 .text {
     color: #024a7a;
     margin-left: 10%;

@@ -1,5 +1,5 @@
 <template>
-    <div class='wrapp'>
+    <div class='wrappe'>
         <img @click="$router.push('/AddUser')" class="plus" src="@/assets/plus.png" alt="add">
         <img @click="$router.push('/')" class="plus2" src="@/assets/images.png" alt="messeges">
         <img @click="$router.push('/Settings')" class="plus3" src="@/assets/settings.png" alt="settings">
@@ -7,11 +7,11 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style scoped>
-.wrapp {
+.wrappe {
     height: 10%;
     width: 99%;
     background-color: #EC9704;
@@ -24,14 +24,17 @@ export default {
     margin-bottom: 2%;
     margin-left: 1%;
 }
+
 .plus {
     height: 80%;
     cursor: pointer;
 }
+
 .plus2 {
     height: 85%;
     cursor: pointer;
 }
+
 .plus3 {
     height: 90%;
     cursor: pointer;

@@ -1,15 +1,15 @@
 <template>
-    <div class='wrapp'>
-        
+    <div class='wrappe'>
+
     </div>
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style scoped>
-.wrapp {
+.wrappe {
     background-color: #EC9704;
     height: 10%;
     width: 99%;

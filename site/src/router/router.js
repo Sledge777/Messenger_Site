@@ -4,7 +4,7 @@ import Messege from "@/pages/messege.vue";
 import Settings from "@/pages/Settings.vue";
 import SignIn from "@/pages/SignIn.vue";
 import SignUp from "@/pages/SignUp.vue";
-import { createWebHistory,createRouter } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
 
 const routes = [
     {
@@ -18,7 +18,7 @@ const routes = [
     {
         path: '/Settings',
         component: Settings
-    }, 
+    },
     {
         path: '/SignIn',
         component: SignIn
@@ -27,7 +27,7 @@ const routes = [
         path: '/SignUp',
         component: SignUp
     },
-    {   
+    {
         path: '/messege',
         component: Messege
     }
