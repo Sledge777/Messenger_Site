@@ -1,7 +1,7 @@
 <template>
     <div class="wrappe">
         <input v-model="messageContent" type="text" placeholder="Введите текст">
-        <img @click="sendMessage" src="@/assets/send.png" alt="send">
+        <img @click="sendContent" src="@/assets/send.png" alt="send">
         <img src="@/assets/voice.png" alt="voice">
     </div>
 </template>
@@ -13,8 +13,8 @@ export default {
         }
     },
     methods: {
-        sendMessage() {
-            this.$emit('sendMessage', this.messageContent);
+        sendContent() {
+            this.$emit('sendContent', this.messageContent);
             this.messageContent = '';
         },
     }

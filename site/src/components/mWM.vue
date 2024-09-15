@@ -2,7 +2,7 @@
         <div class="wrapp">
             <mWHeader class="comp1" :receiver="receivername" />
             <mWC class="comp2" :messages="messages" />
-            <mWFooter class="comp3" @contentMessage="SendMessege" />
+            <mWFooter class="comp3" @sendContent="SendMessege" />
         </div>
     </template>
 
@@ -26,7 +26,7 @@ export default {
             messages: [],
         };
     },
-    beforeMount() { // поменял с mounted
+    mounted() { // поменял с mounted
         this.sendername = localStorage.getItem('sendername');
         this.receivername = localStorage.getItem('receivername');
         this.connectWebSocket();
@@ -38,6 +38,7 @@ export default {
 
             this.socket.on('receiveMessage', (message) => {
                 this.messages.push(message);
+                console.log(message)
             });
 
             this.socket.on('connect_error', (error) => {
@@ -50,6 +51,7 @@ export default {
                 receivername: this.receivername,
                 content: content,
             };
+            console.log(message)
             this.socket.emit('sendMessage', message);
         },
     },
@@ -77,6 +79,6 @@ export default {
 }
 
 .comp2 {
-    margin-top: 20%;
+    margin-top: 30%;
 }
 </style>

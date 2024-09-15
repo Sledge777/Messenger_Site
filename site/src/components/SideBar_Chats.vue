@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    beforeMount() { // поменял с mounted
+    mounted() { // поменял с mounted
         const receivername = localStorage.getItem('receivername')
         const ismessege = localStorage.getItem('ismessege')
         if (ismessege == 'yes') {
