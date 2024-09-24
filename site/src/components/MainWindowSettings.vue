@@ -50,10 +50,12 @@ export default {
     border: 1% black solid;
     border-radius: 20px;
     padding: 2%;
+    transition: all 0.3s;
 }
 
 .auth_btn:hover {
-    background-color: blueviolet;
+    background-color: #FFCF7C;
+    transition: all 0.3s;
 }
 
 .text {

@@ -1,11 +1,14 @@
 <template>
     <div class="wrapper">
-        <button @click="$router.push('/')" class="btn_back">Назад</button>
-        <form @submit.prevent="add()">
-            <input v-model="email" class="input" type="email" placeholder="Введите E-mail Пользователя:" required>
-            <button class="btn">Добавить</button>
-            <div id="validate">{{ this.resp }}</div>
-        </form>
+        <div class="popup">
+            <button @click="$router.push('/')" class="btn_back">Назад</button>
+            <form @submit.prevent="add()">
+                <input v-model="email" class="popup_input" type="email" placeholder="Введите E-mail Пользователя:"
+                    required>
+                <button class="btn">Добавить</button>
+                <div id="validate">{{ this.resp }}</div>
+            </form>
+        </div>
     </div>
 </template>
 <script>
@@ -55,22 +58,32 @@ export default {
 </script>
 <style scoped>
 .wrapper {
-    background-color: rgb(174, 142, 94);
+    background-color: #2E2E2E;
     height: 100vh;
     width: 100vw;
+}
+
+.popup {
+    height: 80vh;
+    width: 80vw;
+    background-color: #A78B71;
+    position: absolute; /* почему не работает без absolut? */
+    margin: 5% 10%;
+    border: 0.3vh black solid;
+    box-shadow: 0 0 5px black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 form {
-    width: 70vh;
+    width: 50vh;
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
 
-.input {
+.popup_input {
     padding: 2vh;
     background-color: #f3d332;
     border-radius: 10px;
@@ -87,10 +100,12 @@ form {
     border-radius: 20px;
     border: 1% black solid;
     padding: 3%;
+    transition: all 0.3s;
 }
 
 .btn:hover {
-    background-color: blueviolet;
+    background-color: #FFCF7C;
+    transition: all 0.3s;
 }
 
 .btn_back {
@@ -106,10 +121,12 @@ form {
     margin-top: 5%;
     padding: 1%;
     border: 1% black solid;
+    transition: all 0.3s;
 }
 
 .btn_back:hover {
-    background-color: blueviolet;
+    background-color: #FFCF7C;
+    transition: all 0.3s;
 }
 
 .denied {
