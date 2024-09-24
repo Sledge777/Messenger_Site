@@ -8,34 +8,34 @@ import { createWebHistory, createRouter } from "vue-router";
 
 const routes = [
     {
-        path: '/',
-        component: Main
+        path: "/",
+        component: Main,
     },
     {
-        path: '/AddUser',
-        component: AddUser
+        path: "/AddUser",
+        component: AddUser,
     },
     {
-        path: '/Settings',
-        component: Settings
+        path: "/Settings",
+        component: Settings,
     },
     {
-        path: '/SignIn',
-        component: SignIn
+        path: "/SignIn",
+        component: SignIn,
     },
     {
-        path: '/SignUp',
-        component: SignUp
+        path: "/SignUp",
+        component: SignUp,
     },
     {
-        path: '/messege',
-        component: Messege
-    }
-]
+        path: "/messege",
+        component: Messege,
+    },
+];
 
 const router = createRouter({
     routes,
-    history: createWebHistory(process.env.BASE_URL)
-})
+    history: createWebHistory(process.env.BASE_URL),
+});
 
 export default router;

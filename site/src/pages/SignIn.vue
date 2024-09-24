@@ -1,14 +1,12 @@
 <template>
     <div class="wrapper">
-        <div class="popup">
-            <button @click="$router.push('/')" class="btn_back">Назад</button>
-            <form @submit.prevent="auth()">
-                <input v-model="email" class="popup_input" type="email" placeholder="Введите E-mail" required>
-                <input v-model="password" class="popup_input" type="password" placeholder="Введите Пароль" required>
-                <button type="submit" class="btn">Войти</button>
-                <div id="validate">{{ this.resp }}</div>
-            </form>
-        </div>
+        <button @click="$router.push('/Settings')" class="btn_back">Назад</button>
+        <form @submit.prevent="auth()">
+            <input v-model="email" class="input" type="email" placeholder="Введите E-mail" required>
+            <input v-model="password" class="input" type="password" placeholder="Введите Пароль" required>
+            <button type="submit" class="btn">Войти</button>
+            <div id="validate">{{ this.resp }}</div>
+        </form>
     </div>
 </template>
 <script>
@@ -58,40 +56,38 @@ export default {
 </script>
 <style scoped>
 .wrapper {
-    background-color: aquamarine;
+    background-color: rgb(174, 142, 94);
     height: 100vh;
     width: 100vw;
-}
-
-.popup {
-    height: 80vh;
-    width: 80vw;
-    background-color: grey;
-    position: absolute;
-    margin: 5% 10%;
-    box-shadow: 0 0 5px black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 form {
-    width: 50vh;
+    width: 70vh;
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
 
-.popup_input {
+.input {
     padding: 2vh;
+    background-color: #f3d332;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 3vh;
+    color: black;
 }
 
 .btn {
-    height: 5vh;
     font-size: 3vh;
-    background-color: aqua;
-    color: white;
-    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #EC9704;
+    color: black;
+    border-radius: 20px;
+    border: 1% black solid;
+    padding: 3%;
 }
 
 .btn:hover {
@@ -100,16 +96,17 @@ form {
 
 .btn_back {
     font-size: 3vh;
-    background-color: aqua;
-    color: white;
-    border-radius: 10px;
+    font-weight: bolder;
+    background-color: #EC9704;
+    color: black;
+    border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
     margin-left: 5%;
     margin-top: 5%;
     padding: 1%;
-    text-align: center;
+    border: 1% black solid;
 }
 
 .btn_back:hover {

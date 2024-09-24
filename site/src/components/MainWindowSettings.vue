@@ -43,11 +43,13 @@ export default {
 }
 
 .auth_btn {
-    height: 5vh;
-    font-size: 3vh;
-    background-color: aqua;
-    color: white;
-    border-radius: 10px;
+    font-size: 5vh;
+    font-weight: bolder;
+    background-color: #EC9704;
+    color: black;
+    border: 1% black solid;
+    border-radius: 20px;
+    padding: 2%;
 }
 
 .auth_btn:hover {
