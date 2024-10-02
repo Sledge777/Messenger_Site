@@ -32,26 +32,26 @@ export default {
                     this.receivername = response.data
                 })
                 .catch(error => {
-                    this.error = error;
+                    this.error = error; // Почему ошибка отрисовыватеся в консоли? ( ответ с сервера?! )
                 })
             const sendername = localStorage.getItem('sendername')
             if (this.error.message == 'Request failed with status code 400') {
                 let div = document.getElementById('validate');
-                div.classList.toggle('denied');
+                div.classList.add('denied');
                 this.resp = 'Пользователь с данной почтой не существует!';
-                await setTimeout(() => location.reload(), 3000) // пофиксить (второй запрос не изменяет результата)
             } else if (sendername == this.receivername) {
                 let div = document.getElementById('validate');
-                div.classList.toggle('denied');
+                div.classList.add('denied');
                 this.resp = 'Это ваша почта!';
-                await setTimeout(() => location.reload(), 3000)
             } else {
                 let div = document.getElementById('validate');
-                div.classList.toggle('access')
+                div.classList.remove('denied')
+                div.classList.add('access')
                 localStorage.setItem('receivername', this.receivername)
                 localStorage.setItem('ismessege', 'yes')
                 await setTimeout(() => this.$router.push('/'), 1000)
             }
+            this.error = ''
         }
     },
 }
@@ -67,7 +67,8 @@ export default {
     height: 80vh;
     width: 80vw;
     background-color: #A78B71;
-    position: absolute; /* почему не работает без absolut? */
+    position: absolute;
+    /* почему не работает без absolut? */
     margin: 5% 10%;
     border: 0.3vh black solid;
     box-shadow: 0 0 5px black;

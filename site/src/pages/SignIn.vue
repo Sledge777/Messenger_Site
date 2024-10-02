@@ -38,20 +38,22 @@ export default {
                 })
             if (this.error.message == 'Request failed with status code 401') {
                 let div = document.getElementById('validate');
-                div.classList.toggle('denied');
+                div.classList.add('denied');
                 this.resp = 'Пользователь с данной почтой уже существует!';
             } else if (this.error.message == 'Network Error') {
                 let div = document.getElementById('validate');
-                div.classList.toggle('denied');
+                div.classList.add('denied');
                 this.resp = 'База данных на другом порту!';
             } else {
                 let div = document.getElementById('validate');
-                div.classList.toggle('access');
+                div.classList.remove('denied')
+                div.classList.add('access');
                 this.resp = 'Авторизация успешна!';
                 localStorage.setItem('token', this.token);
                 localStorage.setItem('sendername', this.email);
                 await setTimeout(() => this.$router.push('/'), 1000)
             }
+            this.error = ''
         }
     }
 }
