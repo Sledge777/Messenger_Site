@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         async auth() {
-            await axios.post('http://localhost:7000/auth/reg', {
+            await axios.post('https://13ab-95-25-37-103.ngrok-free.app/auth/reg', {
                 email: this.email,
                 password: this.password
             })
@@ -51,6 +51,7 @@ export default {
                 this.resp = 'Авторизация успешна!';
                 localStorage.setItem('token', this.token);
                 localStorage.setItem('sendername', this.email);
+                localStorage.setItem('userId', this.userId);
                 await setTimeout(() => this.$router.push('/'), 1000)
             }
             this.error = '';

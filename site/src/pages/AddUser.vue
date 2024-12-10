@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         async add() {
-            await axios.post('http://localhost:7000/users/find', {
+            await axios.post('https://13ab-95-25-37-103.ngrok-free.app/users/find', {
                 email: this.email,
             })
                 .then(response => {

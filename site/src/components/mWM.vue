@@ -23,26 +23,34 @@ export default {
             socket: null,
             sendername: '',
             receivername: '',
+            userId: '',
             messages: [],
         };
     },
-    mounted() { // поменял с mounted
+    mounted() {
         this.sendername = localStorage.getItem('sendername');
+        this.userId = localStorage.getItem('userId');
         this.receivername = localStorage.getItem('receivername');
         this.connectWebSocket();
     },
     methods: {
         connectWebSocket() {
-            this.socket = io('http://localhost:3000');
-            this.socket.emit('joinRoom', this.sendername);
+            this.socket = io('https://bc7b-95-25-37-103.ngrok-free.app', {
+                transports: ['websocket', 'polling']
+            });
+            this.socket.emit('joinRoom', this.userId);
 
             this.socket.on('receiveMessage', (message) => {
                 this.messages.push(message);
                 console.log(message)
             });
 
+            this.socket.on('connect', () => {
+                console.log('Подключение к вебсокет успешно')
+            })
+
             this.socket.on('connect_error', (error) => {
-                console.error('WebSocket Error:', error);
+                console.error('Ошибка подключение к вебсокету:', error);
             });
         },
         SendMessege(content) {

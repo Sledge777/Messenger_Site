@@ -22,16 +22,18 @@ export default {
             error: '',
             resp: '',
             token: '',
+            userId: '',
         }
     },
     methods: {
         async auth() {
-            await axios.post('http://localhost:7000/auth/login', {
+            await axios.post('https://13ab-95-25-37-103.ngrok-free.app/auth/login', {
                 email: this.email,
                 password: this.password
             })
                 .then(response => {
-                    this.token = response.data.token
+                    this.token = response.data.token;
+                    this.userId = response.data.id;
                 })
                 .catch(error => {
                     this.error = error;
@@ -51,6 +53,8 @@ export default {
                 this.resp = 'Авторизация успешна!';
                 localStorage.setItem('token', this.token);
                 localStorage.setItem('sendername', this.email);
+                localStorage.setItem('userId', this.userId);
+                console.log(this.userId)
                 await setTimeout(() => this.$router.push('/'), 1000)
             }
             this.error = ''
