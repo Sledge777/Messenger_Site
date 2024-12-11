@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         async auth() {
-            await axios.post('https://13ab-95-25-37-103.ngrok-free.app/auth/reg', {
+            await axios.post('https://bcd7-95-25-37-128.ngrok-free.app/auth/reg', {
                 email: this.email,
                 password: this.password
             })

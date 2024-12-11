@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         connectWebSocket() {
-            this.socket = io('https://bc7b-95-25-37-103.ngrok-free.app', {
+            this.socket = io('https://aafc-95-25-37-128.ngrok-free.app', {
                 transports: ['websocket', 'polling']
             });
             this.socket.emit('joinRoom', this.userId);
